@@ -22,10 +22,16 @@ namespace ByteBank
 
         public ContaCorrente(int agencia, int numero)
         {
+            if (agencia <= 0 || numero <= 0)
+            {
+                ArgumentException excecao = new ArgumentException("A Agência e o Número devem ser maiores  que zero.");
+                throw excecao;
+            }
+
             Agencia = agencia;
             Numero = numero;
-            
 
+            
             try
             {
                 TaxaOperacao = 30 / TotalDeContasCriadas;
@@ -41,13 +47,7 @@ namespace ByteBank
 
 
 
-        
-
-
-
-
-
-
+       
 
         private double _saldo = 100;
 
