@@ -22,9 +22,15 @@ namespace ByteBank
 
         public ContaCorrente(int agencia, int numero)
         {
-            if (agencia <= 0 || numero <= 0)
+            if (agencia <= 0)
             {
-                ArgumentException excecao = new ArgumentException("A Agência e o Número devem ser maiores  que zero.");
+                ArgumentException excecao = new ArgumentException("O argumento agência  deve ser maior que 0");
+                throw excecao;
+            }
+
+            if (numero <= 0)
+            {
+                ArgumentException excecao = new ArgumentException("O argumento numero  deve ser maior que 0");
                 throw excecao;
             }
 
