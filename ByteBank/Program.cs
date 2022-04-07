@@ -15,7 +15,7 @@ namespace ByteBank
             {
                 ContaCorrente conta = new ContaCorrente(222, 4555);
                 conta.Depositar(10000);
-                conta.Sacar(2033333300);
+                conta.Sacar(-789);
             }
 
             catch (ArgumentException ex)
